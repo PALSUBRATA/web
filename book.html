@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome To book</title>
+<style type="text/css">
+    
+   /* body css for whole page */
+   body
+    {
+	    margin:0px;
+	    background-color:#27a465;
+	    background-image:url(image/background.jpg);
+	    color:#f9fcf5;
+	    font-family:Arial, Helvetica, sans-serif;
+    }
+    
+    #main{width:600px; height:auto; overflow:hidden; padding-bottom:20px; margin-left:auto; margin-right:auto; 
+    border-radius:5px; padding-left:10px; margin-top:100px; border-top:3px double #f1f1f1; 
+    border-bottom:3px double #f1f1f1; padding-top:20px;
+    }
+    
+    #main table{font-family:"Comic Sans MS", cursive;}
+    /* css code for textbox */
+    #main .tb{height:28px; width:230px; border:1px solid #f26724; color:#fd7838; font-weight:bold; border-left:5px solid #f7f7f7; opacity:0.9;}
+    
+    #main .tb:focus{height:28px; border:1px solid #f26724; outline:none; border-left:5px solid #f7f7f7;}
+
+    /* css code for button*/
+    #main .btn{width:150px; height:32px; outline:none;  color:#f7f7f7; font-weight:bold; border:0px solid #f26724; 
+    text-shadow: 0px 0.5px 0.5px #fff; border-radius: 2px; font-weight: 600; color: #f26724; letter-spacing: 1px; 
+    font-size:14px; background-color:#f1f1f1; -webkit-transition: 1s; -moz-transition: 1s; transition: 1s;}
+  
+    #main .btn:hover{background-color:#f26724; outline:none;  border-radius: 2px; color:#f1f1f1; border:1px solid #f1f1f1;
+    -webkit-transition: 1s; -moz-transition: 1s; transition: 1s; }
+    
+    </style>
+    <script>
+        function registration()
+	{
+        var no= document.getElementById("t1").value;
+
+		var name= document.getElementById("t2").value;
+		
+	
+		
+        //email id expression code
+		
+        
+
+		if(isNaN(no))
+		{
+			alert('Please enter number');
+		}
+		else if(name=='')
+		{
+			alert('Please enter your number');
+		}
+		else if(isNaN(no))
+		{
+			alert('Please enter your Age');
+		}
+		
+	
+		else
+		{				                            
+               alert('Thank You for Register & You are Redirecting to loging page');
+			   // Redirecting to other page or webste code. 
+			   window.location = "printticket.html"; 
+		}
+	}
+	function clearFunc()
+	{
+		document.getElementById("t1").value="";
+		document.getElementById("t2").value="";
+		
+	}
+    </script>
+</head>
+
+  <body>
+  <!-- Main div code -->
+  <div id="main">
+  <div class="h-tag">
+  <h2>Book Ticket</h2>
+  </div>
+  <!-- create account div -->
+  <div class="login">
+  <table cellspacing="2" align="center" cellpadding="8" border="0">
+  <tr>
+  <td align="right">Train No :</td>
+  <td><input type="text" placeholder="Enter Train no" id="t1" class="tb" /></td>
+  </tr>
+  <tr>
+  <td align="right">Name :</td>
+  <td><input type="text" placeholder="Enter Name" id="t2" class="tb" /></td>
+  </tr>
+  <tr>
+  <td align="right">Age :</td>
+  <td><input type="text" placeholder="Enter Age" id="t3" class="tb" /></td>
+  </tr>
+  <tr>
+	<td align="right">Source :</td>
+	<td><input type="password" placeholder="Enter SourceS" id="t4" class="tb" /></td>
+	</tr>
+	<tr>
+	<td align="right">Destination :</td>
+	<td><input type="password" placeholder="Enter Destination" id="t4" class="tb" /></td>
+	</tr>
+	 
+
+  <tr>
+  <td align="right">Passenger1 :</td>
+  <td><input type="password" placeholder="Enter Passenger1" id="t4" class="tb" /></td>
+  </tr>
+  <tr>  
+  <td align="right">Gender :</td>
+  <td><input type="radio" value="Male" name="gender" checked > Male   
+	<input type="radio" value="Female" name="gender"> Female</td>
+  </tr>
+  <td align="right">Travel Date</td>
+  <td><input type="date" id="start" name="trip-start"
+	value="2018-07-22"
+	min="2018-01-01" max="2018-12-31"></td>
+  </tr>
+ 
+	    
+
+
+  </td>
+		   
+		   
+  </tr>
+  <tr>
+  <td></td>
+  <td>
+  <input type="reset" value="Clear Form" onclick="clearFunc()" id="res" class="btn" />
+  <input type="submit" value="Book Ticket" class="btn" onclick="registration()" /></td>
+  
+  </tr>
+  </table>
+  </div>
+  <!-- create account box ending here.. -->
+  </div>
+  <!-- Main div ending here... -->
+  </body>
+  </html>
